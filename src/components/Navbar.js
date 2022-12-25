@@ -88,11 +88,11 @@ const NabBtn = styled.div`
 
 `
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
   return (
     <Nav>
       <Logo to='/'>Property.COM</Logo>
-      <MenuBars />
+      <MenuBars onClick={toggle}/>
       <NavMenu >
         {MenuLinks.map((item, index) => (
           <NavMenuLink to={item.link} key={index}>{item.title}</NavMenuLink>
